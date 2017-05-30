@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My First To Do List",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darqoo/todolist.git"
+  },
+  "author": "darqoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darqoo/todolist/issues"
+  },
+  "homepage": "https://github.com/darqoo/todolist#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
+}
