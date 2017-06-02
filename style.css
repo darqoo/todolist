@@ -31,9 +31,14 @@
   padding-top: 20px;
   width: 100%;
   height: 25px;
-
 }
 
 .addLine {
   background-color: white;
+}
+
+.bDone {
+  font-size: 9px;
+  background-color: #e6f2ff;
+  border: none;
 }
