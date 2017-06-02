@@ -27,7 +27,9 @@ function addClickSend(bSend) {
 
 
 function send() {
-  if (txt.value > '') {
+  if (txt.value == "" || txt.value == " " || txt.value == "  " || txt.value == "   "){
+  }
+  else{
     dBase.push(txt.value);
     txt.value = "";
     Render();
