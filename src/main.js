@@ -17,19 +17,21 @@ function addClickSend(bSend) {
     send();
   })
 
-  txt.addEventListener("keyup", function (event) {
-    if (event.keyCode==13) {
-        send();
+  txt.addEventListener("keyup", function(event) {
+    if (event.keyCode == 13) {
+      send();
     }
-});
+  });
 
 }
 
 
 function send() {
-  dBase.push(txt.value);
-  txt.value = "";
-  Render();
+  if (txt.value > '') {
+    dBase.push(txt.value);
+    txt.value = "";
+    Render();
+  }
 }
 
 function addClickDel(index, bDel) {
