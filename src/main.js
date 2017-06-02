@@ -1,5 +1,6 @@
 //database
 var dBase = ["something to do 1", "something to do 2", "something to do 3"];
+var txt = document.querySelector(".txt");
 
 function clearList() {
   with(document.querySelector('.toDoList')) {
@@ -11,12 +12,24 @@ function clearList() {
 
 function addClickSend(bSend) {
   var bSend = document.querySelector(".addLine");
+
   bSend.addEventListener("click", function() {
-    var txt = document.querySelector(".txt");
-    dBase.push(txt.value);
-    txt.value = "";
-    Render();
+    send();
   })
+
+  txt.addEventListener("keyup", function (event) {
+    if (event.keyCode==13) {
+        send();
+    }
+});
+
+}
+
+
+function send() {
+  dBase.push(txt.value);
+  txt.value = "";
+  Render();
 }
 
 function addClickDel(index, bDel) {
@@ -36,6 +49,7 @@ function Render() {
 
   function renderElement(element, index, array) {
     var li = document.createElement("li");
+    li.classList.add("liList");
     ul.appendChild(li);
 
     var bDel = document.createElement("button")
