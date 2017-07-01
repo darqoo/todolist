@@ -5,7 +5,8 @@
   "description": "My First To Do List",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,10 @@
   "homepage": "https://github.com/darqoo/todolist#readme",
   "devDependencies": {
     "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "strongly-typed": "^2.0.1"
   }
 }
